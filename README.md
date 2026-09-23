@@ -3,10 +3,12 @@
 <p align="center">
   <strong>个人专属 AI Agent 技能全景仓库（Skills Monorepo）</strong>
   <br />
-  涵盖系统级日志诊断、深度学习实验管理、学术论文导师、技术学习与专业文档架构
+  涵盖系统级日志诊断、深度学习实验管理、学术论文全流程、集群调度、高效沟通与技术写作
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Core_Skills-12-blue.svg" alt="Core Skills" />
+  <img src="https://img.shields.io/badge/Community_Skills-78-purple.svg" alt="Community Skills" />
   <img src="https://img.shields.io/badge/Platform-Antigravity%20%7C%20Claude%20Code%20%7C%20Codex-success.svg" alt="Platforms" />
   <img src="https://img.shields.io/badge/Maintainer-BlueRocket-orange.svg" alt="Maintainer" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
@@ -21,18 +23,40 @@
 1. **跨平台一键下发**：原生支持一键软链接（Junction / Symlink）至 **Google Antigravity**、**Anthropic Claude Code** 及 **OpenAI Codex**。
 2. **规范化架构**：每个 Skill 均配备标准的 `SKILL.md`（遵循 YAML Frontmatter）、参考知识库 `references/`、规范模板与评测样例 `evals/`。
 3. **极速热更新**：在当前仓库编辑技能源码，本地绑定的各 AI 助手将实时生效，无需重复拷贝。
+4. **开源生态协同**：内置自研高质量核心技能，并配套维护了 [78+ 社区开源高频技能索引表](COMMUNITY_SKILLS.md)。
 
 ---
 
-## 🎯 核心技能矩阵与触发指南
+## 🎯 核心自研技能矩阵与触发指南 (`skills/`)
 
 | 技能名称 | 目录路径 | 核心能力定位 | 典型触发场景 / 常用提示词 |
 | :--- | :--- | :--- | :--- |
 | **`academic-mentor`** | `skills/academic-mentor/` | 学术导师、顶刊文献精读、开题/实验方案设计、审稿意见预演 | `精读这篇论文`、`学术开题指导`、`模拟审稿人提出修改意见` |
 | **`android-linux-log-analysis-doc`** | `skills/android-linux-log-analysis-doc/` | Android/Linux 全栈故障诊断（Kernel/HAL/Bootloader），以证据链为主线输出 Markdown 调查文档 | `分析这段崩溃日志`、`定位休眠唤醒失败问题`、`根据 dmesg 输出排查报告` |
+| **`anti-defensive-writing`** | `skills/anti-defensive-writing/` | 学术写作发布会原则，杜绝防御性写作，聚焦优势叙事，不给审稿人递刀子 | `反防御性写作`、`论文修改不自信`、`组织实验叙事`、`回复审稿意见` |
+| **`cluster-scheduler`** | `skills/cluster-scheduler/` | SLURM/GPU 集群作业编排与并发管理，Job Array 设计、CPU/内存物理瓶颈约束与运行校验 | `调度集群任务`、`编写 sbatch 脚本`、`设计多卡并行实验矩阵` |
+| **`cv-research`** | `skills/cv-research/` | 计算机视觉与 AI 科研端到端指导，命题-证据审计台账、消融基线设计与假说可证伪性检验 | `设计 CVPR/ICCV 实验`、`检验科学假说`、`审计主张证据链` |
+| **`daily-paper-generator`** | `skills/daily-paper-generator/` | 每日前沿文献自动化追踪与筛选，支持 arXiv / bioRxiv 双源抓取与高质量中英双语精读简报 | `生成每日学术简报`、`追踪该领域最新 arXiv 论文`、`筛选 Top 3 必读` |
 | **`dlexperiment`** | `skills/dlexperiment/` | 深度学习实验管理 OS，涵盖实验设计原则、消融对比、多随机种子聚合与评估模板 | `制定消融实验方案`、`对比模型训练指标`、`生成规范深度学习实验记录` |
+| **`expression-skill`** | `skills/expression-skill/` | 结论先行、减法原则与高密度信息交付的高效工程沟通标准，规避假大空套话 | `结论先行汇报`、`提炼执行重点`、`按工程交付标准总结` |
+| **`fable-analyze`** | `skills/fable-analyze/` | 外部大模型裁决与战略发散双模式工作流，Evidence Brief 收集与成本红线管理 | `需要外部裁决方案`、`发散创新架构定位`、`Fable 深度分析` |
+| **`latex-conference-template-organizer`** | `skills/latex-conference-template-organizer/` | 顶级学术会议 LaTeX 模板自动化解压与重构，生成 Overleaf 规范结构与匿名提交配置 | `整理会议 LaTeX 模板`、`生成 Overleaf 工程`、`配置 KDD/CVPR 匿名提交` |
 | **`tech-doc-writer`** | `skills/tech-doc-writer/` | 顶尖技术文档架构指南，规范逻辑结构、严谨技术表达、反模式排查与图表选型 | `编写系统架构设计文档`、`重构技术方案`、`检查文档逻辑漏洞与反模式` |
 | **`tech-learner`** | `skills/tech-learner/` | 第一性原理深度技术学习，追溯技术源头，构建系统化认知脉络 | `深度搞懂 I2C/SPI 底层机制`、`从第一性原理拆解该架构`、`生成体系化学习路线` |
+
+---
+
+## 🌐 常用外部与社区开源技能清单
+
+除了自研核心技能外，为了方便日常跨环境复用与溯源，仓库整理了配套的开源技能导航：
+
+👉 **[点击查阅完整的 78+ 常用外部开源技能清单 (COMMUNITY_SKILLS.md)](COMMUNITY_SKILLS.md)**
+
+涵盖四大学用领域：
+- **学术科研与论文写作**：`nature-skills`、`CCFA-Skills`、`sci-skill`、`research-gap-finder`、`paper-writer` 等
+- **知识管理与文献双链**：`obsidian-skills`、`zotero-obsidian-bridge`、`defuddle` 等
+- **编程工程与智能体开发**：`superpowers`、`ui-ux-pro-max`、`uv-package-manager`、`forkprobe` 等
+- **日常效率与内容润色**：`grill-me`、`humanizer`、`writing-anti-ai`、`ppt-master` 等
 
 ---
 
@@ -82,29 +106,23 @@ chmod +x install.sh
 ```text
 myskills/
 ├── .gitignore                      # 忽略临时缓存、日志与系统文件
-├── README.md                       # 仓库全景说明与技能总索引
+├── README.md                       # 仓库全景说明与自研技能总索引
+├── COMMUNITY_SKILLS.md             # 78+ 常用社区/外部开源技能导航表
 ├── install.ps1                     # Windows PowerShell 自动化安装与软链脚本
 ├── install.sh                      # Linux / macOS Bash 安装与软链脚本
-├── skills/                         # 核心独立技能目录
+├── skills/                         # 12 个核心自研/深度定制技能目录
 │   ├── academic-mentor/            # 学术导师与论文研读
-│   │   ├── SKILL.md
-│   │   ├── references/             # 论文模板与提示词库
-│   │   └── evals/                  # 评测用例
 │   ├── android-linux-log-analysis-doc/ # 系统日志诊断
-│   │   ├── SKILL.md
-│   │   ├── skill_guide_zh.md       # 中文使用指南
-│   │   ├── references/             # 内核/HAL/Bootloader 备忘
-│   │   └── evals/
+│   ├── anti-defensive-writing/     # 反防御性学术写作原则
+│   ├── cluster-scheduler/          # SLURM/GPU 集群编排与调度
+│   ├── cv-research/                # CV/AI 科研审计与实验设计
+│   ├── daily-paper-generator/      # arXiv/bioRxiv 文献追踪生成器
 │   ├── dlexperiment/               # 深度学习实验 OS
-│   │   ├── SKILL.md
-│   │   ├── references/
-│   │   └── templates/              # 实验设计协议与模板
+│   ├── expression-skill/           # 结论先行高效工程沟通
+│   ├── fable-analyze/              # 战略发散与外部模型裁决
+│   ├── latex-conference-template-organizer/ # 会议 LaTeX 模板整理器
 │   ├── tech-doc-writer/            # 技术文档编写指南
-│   │   ├── SKILL.md
-│   │   └── references/             # 反模式、表达法则与结构决策
 │   └── tech-learner/               # 第一性原理技术学习
-│       ├── SKILL.md
-│       └── test_output/            # 知识拆解产物示例
 └── suites/                         # 专项套件目录
     └── cryogenian/                 # 专项研究套件
 ```
@@ -124,25 +142,8 @@ myskills/
 
 ---
 
-## 🔗 推送至远端 Git 仓库
-
-如果您在 Gitee 或 GitHub 上新建了远程仓库（如 `myskills`），可执行以下命令完成初次关联与推送：
-
-```bash
-# 1. 添加远端仓库（以 Gitee 为例）
-git remote add origin git@gitee.com:BlueRocket/myskills.git
-
-# 2. 验证提交分支
-git branch -M main
-
-# 3. 推送至远端
-git push -u origin main
-```
-
----
-
 ## 👤 作者与维护者
 
-- **Author / Maintainer**: [BlueRocket](https://gitee.com/BlueRocket)
+- **Author / Maintainer**: [BlueRocket](https://github.com/umbra-w)
 - **Commit Identity**: `BlueRocket <BlueRocket@noreply.com>`
 - **License**: MIT License
