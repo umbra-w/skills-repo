@@ -1,0 +1,13 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp and logs
+*.log
+*.tmp
+tmp/
+temp/
+__pycache__/
+*.pyc
+.venv/
