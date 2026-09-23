@@ -1,0 +1,60 @@
+{
+  "skill_name": "dlexperiment-skill",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "在这个深度学习项目里启动一个新实验：验证 VisA 数据集上 response-gap 融合是否比 defect-only baseline 更好。baseline 是当前 best config，变量是 fusion score = defect_response - normal_response，指标看 image AUROC、pixel AUROC、AUPRO。先不要真的跑训练，只创建实验记录和 run.sh 占位。",
+      "expected_output": "Creates a standardized experiments/exp_YYYYMMDD_NNN_response_gap or similar directory with README, plan, progress, result, runs/, scripts/run.sh, and updates experiments/index.md.",
+      "files": [],
+      "assertions": [
+        "Creates an experiments/exp_YYYYMMDD_NNN_slug directory instead of loose files",
+        "Creates README.md, plan.md, progress.md, and result.md",
+        "Creates runs/, scripts/, and (in full mode) configs, patches, figures, snapshots, and .gitignore",
+        "Records baseline, variable under test, dataset, metrics, and success criterion in plan.md",
+        "Creates scripts/run.sh and marks it as placeholder if the exact run command is unknown",
+        "Updates experiments/index.md with ID, path, goal, variable, status, best metric, conclusion, and updated date"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "把这次模型修改记到当前实验里：目的：验证 selector_fix 能不能减少 normal false positive；修改文件 models/selector.py 和 configs/train.yaml；核心改动是提高 normal branch threshold，从 0.45 到 0.55；预期提升 image AUROC，但风险是 defect recall 下降。",
+      "expected_output": "Appends a structured modification record to progress.md with time, purpose, changed files, core change, expected impact, risk, and next step.",
+      "files": [],
+      "assertions": [
+        "Writes a structured modification record rather than only replying conversationally",
+        "Includes timestamp, purpose, changed files, core change, expected impact, risk, related artifact, and next step fields",
+        "Mentions both models/selector.py and configs/train.yaml",
+        "Captures threshold change from 0.45 to 0.55",
+        "Records the expected AUROC improvement and defect recall risk",
+        "Writes the entry to progress.md or clearly explains if no active experiment exists"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "分析实验 exp_20260529_001_visa_transfer 的结果：runs/run_001/metrics.json 里 image_auc=0.912, pixel_auc=0.967, aupro=0.891；baseline 是 image_auc=0.884, pixel_auc=0.961, aupro=0.873。更新 result.md 和 experiments/index.md，并告诉我下一轮应该试什么。",
+      "expected_output": "Extracts metrics, computes deltas, updates result/index, marks hypothesis supported or promising, and proposes controlled next experiments.",
+      "files": [],
+      "assertions": [
+        "Extracts image_auc, pixel_auc, and aupro current values from runs/run_001/metrics.json",
+        "Computes deltas versus baseline: image_auc +0.028, pixel_auc +0.006, aupro +0.018",
+        "Updates result.md with a run summary and metrics table",
+        "Updates the conclusion section of result.md with a supported/promising/inconclusive judgment and evidence",
+        "Updates experiments/index.md with status, best metric, conclusion, and updated date",
+        "Suggests at least one controlled next experiment with goal, variable, controls, expected metric movement, and risk"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "分析实验 exp_20260601_002_response_gap 的结果：runs/run_001/ 下有三个 seed。seed_0/metrics.json: image_auc=0.915, pixel_auc=0.968, aupro=0.892；seed_1/metrics.json: image_auc=0.911, pixel_auc=0.966, aupro=0.889；seed_2/metrics.json: image_auc=0.910, pixel_auc=0.967, aupro=0.891。baseline 是 image_auc=0.912±0.004。判断结论时注意 seed 方差。",
+      "expected_output": "Aggregates metrics as mean ± std across the three seeds, compares to baseline with the spread in mind, and marks the conclusion supported or inconclusive accordingly.",
+      "files": [],
+      "assertions": [
+        "Reads metrics from runs/run_001/seed_0/metrics.json, seed_1/metrics.json, and seed_2/metrics.json",
+        "Computes mean ± std across seeds for image_auc (0.912 ± 0.0026), pixel_auc, and aupro",
+        "Includes a per-seed breakdown table in result.md",
+        "Does not overclaim: compares against the baseline spread and marks the judgment supported or inconclusive with evidence",
+        "Updates experiments/index.md with status and best metric"
+      ]
+    }
+  ]
+}

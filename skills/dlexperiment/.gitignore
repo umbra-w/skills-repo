@@ -1,0 +1,26 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Skill packaging outputs
+*.skill
+
+# Local eval/review artifacts
+*-workspace/
+review.html
+feedback.json
+benchmark.json
+benchmark.md
+
+# Experiment outputs if someone tests inside this repo
+experiments/
+outputs/
+checkpoints/
+logs/
