@@ -1,0 +1,23 @@
+﻿{
+  "skill_name": "android-linux-log-analysis-doc",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "我有一份 Android logcat，系统里某个 vendor HAL 服务反复死掉重启。我还给了 init rc、manifest 和几个源码路径，帮我写一份像工程笔记一样的分析，讲清楚现象、时间线、关键证据、根因和验证方法。",
+      "expected_output": "A human-readable app-layer diagnosis report with mode selection, timeline, key evidence, source-path mapping, root cause, and verification.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "下面是 dmesg 和一组驱动源码路径，USB 在长时间 suspend/resume 后反复 reset 枚举。我希望你按日志和代码一起分析，输出一份通俗易懂、证据链清晰的分析文档，不要只给结论。",
+      "expected_output": "A kernel-log analysis report that ties the dmesg lines to driver code paths and explains the failure chain clearly.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "这是 LK/U-Boot 串口日志，机器能进 bootloader 但卡在加载 kernel 之前黑屏。我也给了 bootloader 的几个源码路径，帮我判断是 DDR、dtb、bootargs 还是 handoff 问题，并写成方便给人看的分析笔记。",
+      "expected_output": "A bootloader-log analysis report that identifies the failing stage, connects logs to bootloader code, and explains the likely handoff/root cause.",
+      "files": []
+    }
+  ]
+}
