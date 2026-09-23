@@ -1,0 +1,23 @@
+{
+  "skill_name": "academic-mentor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我在写一篇医学影像方向的方法应用类论文，先别鼓励我，直接像 Reviewer 2 一样挑刺。现在最担心实验设计站不住。我的任务是用胸部 CT 预测 EGFR 突变状态，数据来自两家医院共 1,240 例，A 医院 2021-2023 年 980 例，B 医院 2024 年 260 例。现在我把全部数据随机 8:2 划分，先做归一化再分训练测试；基线打算和 ResNet50、DenseNet121、一个 2021 年的 radiomics 方法比；指标主要写 Accuracy 和 AUC；还没想好消融。请你判断这到底属于哪一阶段，并给我一版严苛验收，不要帮我润色。",
+      "expected_output": "Should route to methods-application or empirical Stage 4 Audit, identify data leakage and unfair baseline risks, use the 6-part acceptance template, and include an AI capability boundary instead of generic encouragement.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我要写一篇综述，主题大概是多模态大模型在病理诊断里的应用。我现在不是要你直接写正文，而是想知道怎么把第二阶段搭起来。请你按真正能执行的综述流程来，帮我输出检索策略、纳入排除标准、证据矩阵字段和研究空白分类。我希望你把我当成准备投稿而不是写课程作业的人。",
+      "expected_output": "Should route to Review Stage 2 Produce, stay local to that stage, produce PRISMA-aware deliverables rather than a full paper outline, and avoid auto-advancing into later stages.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我写的是理论类论文，核心直觉是：平台推荐算法改变了公共讨论里什么东西会被看见，因此也改变了公共理性的形成条件。这个说法现在太虚了。不要给我泛泛建议，直接把它压成一个可争辩的理论立场，顺便指出最容易被审稿人攻击的 3 个反驳点。我还没有实证数据，所以别假装我有。",
+      "expected_output": "Should route to Theory Stage 3 Produce, convert the intuition into a defensible argumentative entry point, surface likely objections, and avoid inventing empirical evidence or forcing an empirical hypothesis template.",
+      "files": []
+    }
+  ]
+}
