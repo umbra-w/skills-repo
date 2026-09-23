@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     MySkills 一键安装与软链脚本 (Windows)
 .DESCRIPTION
