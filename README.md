@@ -3,11 +3,10 @@
 <p align="center">
   <strong>个人专属 AI Agent 技能全景仓库（Skills Monorepo）</strong>
   <br />
-  涵盖系统级日志诊断、深度学习实验管理、前沿科研套件、技术学习与专业文档架构
+  涵盖系统级日志诊断、深度学习实验管理、学术论文导师、技术学习与专业文档架构
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills_Count-17-blue.svg" alt="Skills Count" />
   <img src="https://img.shields.io/badge/Platform-Antigravity%20%7C%20Claude%20Code%20%7C%20Codex-success.svg" alt="Platforms" />
   <img src="https://img.shields.io/badge/Maintainer-BlueRocket-orange.svg" alt="Maintainer" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" />
@@ -25,9 +24,7 @@
 
 ---
 
-## 🎯 技能矩阵与触发指南
-
-### 1. 核心独立技能 (`skills/`)
+## 🎯 核心技能矩阵与触发指南
 
 | 技能名称 | 目录路径 | 核心能力定位 | 典型触发场景 / 常用提示词 |
 | :--- | :--- | :--- | :--- |
@@ -36,27 +33,6 @@
 | **`dlexperiment`** | `skills/dlexperiment/` | 深度学习实验管理 OS，涵盖实验设计原则、消融对比、多随机种子聚合与评估模板 | `制定消融实验方案`、`对比模型训练指标`、`生成规范深度学习实验记录` |
 | **`tech-doc-writer`** | `skills/tech-doc-writer/` | 顶尖技术文档架构指南，规范逻辑结构、严谨技术表达、反模式排查与图表选型 | `编写系统架构设计文档`、`重构技术方案`、`检查文档逻辑漏洞与反模式` |
 | **`tech-learner`** | `skills/tech-learner/` | 第一性原理深度技术学习，追溯技术源头，构建系统化认知脉络 | `深度搞懂 I2C/SPI 底层机制`、`从第一性原理拆解该架构`、`生成体系化学习路线` |
-
----
-
-### 2. 成冰纪古环境科研套件 (`suites/cryogenian/`)
-
-成冰纪（Cryogenian）“雪球地球”古海洋环境与地球化学研究多 Agent 协同套件，内含 **12** 个专项子技能：
-
-| 模块分类 | 技能名称 | 对应目录 | 职责说明 |
-| :--- | :--- | :--- | :--- |
-| **调度中枢** | `cryogenian-research-router` | `suites/cryogenian/skills/cryogenian-research-router/` | 科研总控调度，自动分析科研目标并分发给对应专项 Agent |
-| **文献与证据** | `cryogenian-paper-reader` | `suites/cryogenian/skills/cryogenian-paper-reader/` | 顶刊（Nature/Science/Geology）地学前沿精读与关键证据提取 |
-| | `cryogenian-evidence-scout` | `suites/cryogenian/skills/cryogenian-evidence-scout/` | 交叉线索挖掘，综合碳/氧/铁同位素等多源数据进行互证 |
-| **假说与设计** | `cryogenian-hypothesis-lab` | `suites/cryogenian/skills/cryogenian-hypothesis-lab/` | 假说生成实验室，推演古环境突变机制并设计可证伪实验 |
-| | `cryogenian-study-design` | `suites/cryogenian/skills/cryogenian-study-design/` | 剖面地层学、野外采样规范与地球化学测试方案设计 |
-| **数据与图件** | `cryogenian-data-analysis` | `suites/cryogenian/skills/cryogenian-data-analysis/` | 碳/硫/铁组分地球化学数据分析与古海洋氧化还原状态重建 |
-| | `cryogenian-figure` | `suites/cryogenian/skills/cryogenian-figure/` | 顶刊级概念示意图与古地理/古海洋模式图构思指导 |
-| **论文与润色** | `cryogenian-writing` | `suites/cryogenian/skills/cryogenian-writing/` | 地学顶刊结构规范撰写（Abstract/Intro/Discussion/Model） |
-| | `cryogenian-polishing` | `suites/cryogenian/skills/cryogenian-polishing/` | 地学专业英语词汇润色、学术语气凝练与句式优化 |
-| **同行评议** | `cryogenian-reviewer` | `suites/cryogenian/skills/cryogenian-reviewer/` | 模拟高标准同行评审，严苛筛查数据断环与论证漏洞 |
-| **领域支撑** | `cryogenian-paleoenvironment` | `suites/cryogenian/skills/cryogenian-paleoenvironment/` | 成冰纪雪球地球与南华纪演化领域先验知识库 |
-| | `cryogenian-shared` | `suites/cryogenian/skills/cryogenian-shared/` | 套件公共共享规则、常量与跨技能协同接口 |
 
 ---
 
@@ -110,11 +86,11 @@ myskills/
 ├── install.ps1                     # Windows PowerShell 自动化安装与软链脚本
 ├── install.sh                      # Linux / macOS Bash 安装与软链脚本
 ├── skills/                         # 核心独立技能目录
-│   ├── academic-mentor/            # 学术导师
+│   ├── academic-mentor/            # 学术导师与论文研读
 │   │   ├── SKILL.md
 │   │   ├── references/             # 论文模板与提示词库
 │   │   └── evals/                  # 评测用例
-│   ├── android-linux-log-analysis-doc/ # 日志分析
+│   ├── android-linux-log-analysis-doc/ # 系统日志诊断
 │   │   ├── SKILL.md
 │   │   ├── skill_guide_zh.md       # 中文使用指南
 │   │   ├── references/             # 内核/HAL/Bootloader 备忘
@@ -130,24 +106,7 @@ myskills/
 │       ├── SKILL.md
 │       └── test_output/            # 知识拆解产物示例
 └── suites/                         # 专项套件目录
-    └── cryogenian/                 # 成冰纪古环境科研套件
-        ├── README.md               # 套件专属说明书
-        ├── install.ps1             # 套件专属安装脚本
-        ├── install.sh
-        ├── skills.txt
-        └── skills/                 # 12 个专项科研子技能
-            ├── cryogenian-data-analysis/
-            ├── cryogenian-evidence-scout/
-            ├── cryogenian-figure/
-            ├── cryogenian-hypothesis-lab/
-            ├── cryogenian-paleoenvironment/
-            ├── cryogenian-paper-reader/
-            ├── cryogenian-polishing/
-            ├── cryogenian-research-router/
-            ├── cryogenian-reviewer/
-            ├── cryogenian-shared/
-            ├── cryogenian-study-design/
-            └── cryogenian-writing/
+    └── cryogenian/                 # 专项研究套件
 ```
 
 ---
