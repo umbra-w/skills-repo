@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Hypothesis Lab"
+  short_description: "Generate bold ideas, then test them rigorously"
+  default_prompt: "Use $cryogenian-hypothesis-lab to explore diverse Cryogenian mechanisms before validating a shortlist."

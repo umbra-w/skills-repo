@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Reviewer"
+  short_description: "Stress-test Cryogenian claims and manuscripts"
+  default_prompt: "Use $cryogenian-reviewer to audit this work as an independent Cryogenian research referee."

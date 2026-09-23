@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Data Analysis"
+  short_description: "Analyze Cryogenian data reproducibly"
+  default_prompt: "Use $cryogenian-data-analysis to audit and analyze these data with geological scale and uncertainty preserved."

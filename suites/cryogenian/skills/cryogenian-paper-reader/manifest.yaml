@@ -1,0 +1,11 @@
+skill: cryogenian-paper-reader
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/provenance-and-scale.md
+products:
+  point: located source answer
+  component: source-grounded paper dossier
+  system: comparable multi-paper synthesis
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Paleoenvironment"
+  short_description: "Compatibility entry for the Cryogenian research suite"
+  default_prompt: "Use $cryogenian-paleoenvironment for a bounded domain answer, or route the requested product to its independent suite Skill."

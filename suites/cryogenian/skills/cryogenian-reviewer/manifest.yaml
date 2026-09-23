@@ -1,0 +1,12 @@
+skill: cryogenian-reviewer
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/provenance-and-scale.md
+    - ../cryogenian-shared/core/evidence-freshness.md
+products:
+  point: bounded verdict and repair
+  component: focused scientific audit
+  system: referee-style review package
+

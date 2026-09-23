@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Writing"
+  short_description: "Draft evidence-grounded Cryogenian research prose"
+  default_prompt: "Use $cryogenian-writing to draft this Cryogenian research text within the supplied evidence and claim ceiling."

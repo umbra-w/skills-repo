@@ -1,0 +1,2 @@
+{"skill_name":"cryogenian-paper-reader","evals":[{"id":1,"prompt":"In this supplied paper, what does Figure 4 actually show about open water? Answer only that question.","expected_output":"A direct located answer separating observation and interpretation without a full dossier.","files":[]},{"id":2,"prompt":"Critically read this Cryogenian Hg-isotope paper and build a reusable dossier for my project.","expected_output":"A source-state-aware dossier covering context, methods, QA/QC, observations, interpretations, limits, and locators.","files":[]}]}
+

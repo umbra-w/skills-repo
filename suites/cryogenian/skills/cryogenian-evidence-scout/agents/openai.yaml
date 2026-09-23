@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Evidence Scout"
+  short_description: "Find and verify current Cryogenian evidence"
+  default_prompt: "Use $cryogenian-evidence-scout to verify this Cryogenian claim and return a source-grounded evidence product."

@@ -1,0 +1,11 @@
+skill: cryogenian-polishing
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/terminology.md
+products:
+  point: polished sentence or phrase
+  component: polished passage and edit memo
+  system: consistent manuscript edit and style sheet
+

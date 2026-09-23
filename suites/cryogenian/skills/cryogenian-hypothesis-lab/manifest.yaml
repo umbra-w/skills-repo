@@ -1,0 +1,11 @@
+skill: cryogenian-hypothesis-lab
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/discovery-validation.md
+products:
+  point: bounded hypothesis element
+  component: discovery portfolio and validated shortlist
+  system: programme hypothesis map
+

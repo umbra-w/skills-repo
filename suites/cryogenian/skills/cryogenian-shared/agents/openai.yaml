@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Shared"
+  short_description: "Internal contracts; not a user workflow"
+  default_prompt: "Load $cryogenian-shared only when another Cryogenian suite Skill requests a specific shared contract."

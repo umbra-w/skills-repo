@@ -1,0 +1,11 @@
+skill: cryogenian-data-analysis
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/provenance-and-scale.md
+products:
+  point: reproducible calculation or diagnostic
+  component: audited analysis package
+  system: multi-proxy integration workflow
+

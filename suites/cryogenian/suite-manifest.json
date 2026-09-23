@@ -1,0 +1,28 @@
+{
+  "name": "cryogenian-research-suite",
+  "version": "1.0.0",
+  "description": "Independent Cryogenian and paleoenvironmental geochemistry research Skill suite",
+  "entry_skill": "cryogenian-research-router",
+  "compatibility_skill": "cryogenian-paleoenvironment",
+  "shared_skill": "cryogenian-shared",
+  "requires_nature_skills": false,
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "skills": [
+    "cryogenian-research-router",
+    "cryogenian-evidence-scout",
+    "cryogenian-paper-reader",
+    "cryogenian-hypothesis-lab",
+    "cryogenian-study-design",
+    "cryogenian-data-analysis",
+    "cryogenian-writing",
+    "cryogenian-polishing",
+    "cryogenian-figure",
+    "cryogenian-reviewer",
+    "cryogenian-shared",
+    "cryogenian-paleoenvironment"
+  ]
+}

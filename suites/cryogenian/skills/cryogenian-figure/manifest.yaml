@@ -1,0 +1,11 @@
+skill: cryogenian-figure
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/provenance-and-scale.md
+products:
+  point: bounded panel correction
+  component: editable figure and verified exports
+  system: manuscript figure system
+

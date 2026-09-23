@@ -1,0 +1,13 @@
+skill: cryogenian-writing
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/provenance-and-scale.md
+  conditional:
+    current_claims: ../cryogenian-shared/core/evidence-freshness.md
+products:
+  point: bounded scientific prose
+  component: section plus claim ledger
+  system: manuscript draft and evidence audit
+

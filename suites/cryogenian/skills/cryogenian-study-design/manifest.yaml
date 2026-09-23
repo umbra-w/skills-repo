@@ -1,0 +1,11 @@
+skill: cryogenian-study-design
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/provenance-and-scale.md
+products:
+  point: bounded design decision
+  component: decision-led study plan
+  system: staged research programme
+

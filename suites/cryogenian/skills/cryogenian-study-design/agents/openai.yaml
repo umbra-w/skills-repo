@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Study Design"
+  short_description: "Design discriminating Cryogenian studies"
+  default_prompt: "Use $cryogenian-study-design to build a decision-led sampling, analysis, QA/QC, and uncertainty plan."

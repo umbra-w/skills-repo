@@ -1,0 +1,80 @@
+name: cryogenian-paleoenvironment
+version: 1.0.0
+description: >
+  Compatibility router for bounded Cryogenian paleoenvironment reconstruction;
+  independent task products belong to the Cryogenian research suite.
+
+shared_contracts:
+  scope: ../cryogenian-shared/core/task-scope.md
+  freshness: ../cryogenian-shared/core/evidence-freshness.md
+  generalization: ../cryogenian-shared/core/geochemistry-generalization.md
+
+suite_routes:
+  system: cryogenian-research-router
+  evidence: cryogenian-evidence-scout
+  reading: cryogenian-paper-reader
+  hypotheses: cryogenian-hypothesis-lab
+  design: cryogenian-study-design
+  analysis: cryogenian-data-analysis
+  writing: cryogenian-writing
+  polishing: cryogenian-polishing
+  figures: cryogenian-figure
+  review: cryogenian-reviewer
+
+always_load:
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-contract.md
+
+axes:
+  workflow:
+    detect: |
+      Select one or more workflows from the user's requested research action.
+      Use frame-research for questions or hypotheses; audit-evidence for claim,
+      provenance, chronology, preservation, or scale checks; interpret-proxies
+      for sedimentological, elemental, mineralogical, or isotope data;
+      reconstruct-environment for paleogeographic or paleoceanographic state;
+      test-mechanisms for causal models; design-study for sampling or analytical
+      plans; assess-habitability for environmental opportunity versus biological
+      occupation; and review-argument for proposal, manuscript, model, or review
+      claims. Multiple values may apply. Run frame/audit before interpretation,
+      interpretation before reconstruction/mechanism/habitability, and all of
+      those before argument review.
+    values:
+      frame-research: static/fragments/workflow/frame-research.md
+      audit-evidence: static/fragments/workflow/audit-evidence.md
+      interpret-proxies: static/fragments/workflow/interpret-proxies.md
+      reconstruct-environment: static/fragments/workflow/reconstruct-environment.md
+      test-mechanisms: static/fragments/workflow/test-mechanisms.md
+      design-study: static/fragments/workflow/design-study.md
+      assess-habitability: static/fragments/workflow/assess-habitability.md
+      review-argument: static/fragments/workflow/review-argument.md
+    multi: true
+
+references:
+  status: STATIC-HEURISTIC
+  on_demand:
+    - condition: provenance labels, evidence strength, independence, confidence, or source-boundary audit
+      path: references/evidence-and-provenance.md
+    - condition: age model, event duration, stratigraphic correlation, diachroneity, or regional/global synchronization
+      path: references/chronology-and-correlation.md
+    - condition: diamictite, dropstone, glacial facies, ice-contact process, sea ice, polynya, or open-water interpretation
+      path: references/glacial-sedimentology-and-open-water.md
+    - condition: Cryogenian iron formation, BIF/CIF deposition, iron source, oxidation pathway, or ferruginous water
+      path: references/cryogenian-iron-formations.md
+    - condition: Hg concentration, Hg/TOC, Hg/Al, delta202Hg, Delta199Hg, Delta201Hg, MDF, MIF, or mercury host phase
+      path: references/mercury-isotopes.md
+    - condition: Fe speciation, trace metals, REE, Ce anomaly, sulfur/carbon/iron isotopes, weathering proxies, or multi-proxy integration
+      path: references/multiproxy-geochemistry.md
+    - condition: atmospheric deposition, continental weathering, runoff, nutrient transfer, ocean mixing, burial, or atmosphere-land-ocean cycling
+      path: references/atmosphere-land-ocean-cycling.md
+    - condition: deglaciation, environmental recovery, productivity, ecological opportunity, biosignature, or early habitability
+      path: references/deglaciation-and-habitability.md
+    - condition: field sampling, section selection, analytical design, replication, controls, or decision table
+      path: references/sampling-and-study-design.md
+    - condition: causal inference, model comparison, alternative explanation, falsifier, or discriminating prediction
+      path: references/competing-hypotheses.md
+    - condition: Nanhua Basin, South China, Sturtian iron formation, or the user's anchor research program
+      path: references/nanhua-sturtian-profile.md
+    - condition: a scientific rule needs a verified methodological or domain source, DOI, or source limitation
+      path: references/source-foundation.md

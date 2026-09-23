@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Research Router"
+  short_description: "Coordinate the independent Cryogenian research suite"
+  default_prompt: "Use $cryogenian-research-router to classify scope and coordinate only the research Skills needed for this task."

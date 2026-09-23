@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Paper Reader"
+  short_description: "Read Cryogenian papers with source-level grounding"
+  default_prompt: "Use $cryogenian-paper-reader to answer from the supplied paper with exact source boundaries and locators."

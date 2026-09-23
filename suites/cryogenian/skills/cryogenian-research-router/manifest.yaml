@@ -1,0 +1,18 @@
+skill: cryogenian-research-router
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/geochemistry-generalization.md
+  system_handoff: ../cryogenian-shared/schemas/handoff.md
+routes:
+  evidence: cryogenian-evidence-scout
+  reading: cryogenian-paper-reader
+  hypotheses: cryogenian-hypothesis-lab
+  design: cryogenian-study-design
+  analysis: cryogenian-data-analysis
+  writing: cryogenian-writing
+  polishing: cryogenian-polishing
+  figures: cryogenian-figure
+  review: cryogenian-reviewer
+

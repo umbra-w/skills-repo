@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Polishing"
+  short_description: "Polish Cryogenian prose without changing the science"
+  default_prompt: "Use $cryogenian-polishing to improve this text while preserving every scientific qualification and notation."

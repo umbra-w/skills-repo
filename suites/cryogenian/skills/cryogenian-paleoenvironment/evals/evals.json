@@ -1,0 +1,29 @@
+{
+  "skill_name": "cryogenian-paleoenvironment",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Delta199Hg 和 delta202Hg 的区别是什么？请只回答这个小问题。",
+      "expected_output": "A direct concise distinction between MIF and MDF notation, with no project scaffold or suite handoff.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "南华盆地 Sturtian 铁建造邻近冰碛岩，并有沉积学和 Hg 同位素数据。请重建开放水体、退冰和大气-陆地-海洋循环，同时说明不能成立的结论。",
+      "expected_output": "A bounded reconstruction separating observations, context, interpretations, hypotheses and unknowns; checking chronology, facies, preservation, Hg carriers and alternatives; and limiting local evidence from global claims.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "请把这个完整 Cryogenian 项目继续做到检索、分析、写作、绘图和投稿前评审。",
+      "expected_output": "Compatibility routing to cryogenian-research-router and the independent task Skills rather than Nature Skills.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Apply the method to a Phanerozoic selenium-isotope paleoredox study outside South China.",
+      "expected_output": "A generalized geochemical approach that preserves evidence contracts but does not import Nanhua, CIF, or Cryogenian assumptions.",
+      "files": []
+    }
+  ]
+}

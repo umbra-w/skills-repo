@@ -1,0 +1,13 @@
+skill: cryogenian-evidence-scout
+version: 1
+shared:
+  always_load:
+    - ../cryogenian-shared/core/task-scope.md
+    - ../cryogenian-shared/core/evidence-freshness.md
+  conditional:
+    evidence_packet: ../cryogenian-shared/schemas/evidence-packet.md
+products:
+  point: verified claim answer
+  component: dated evidence packet
+  system: multi-strand evidence map
+

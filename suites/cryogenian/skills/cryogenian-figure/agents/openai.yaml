@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cryogenian Figure"
+  short_description: "Create and verify Cryogenian scientific figures"
+  default_prompt: "Use $cryogenian-figure to create an editable, data-faithful figure and visually verify its final render."
