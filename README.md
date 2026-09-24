@@ -24,11 +24,11 @@
 1. **跨平台一键下发**：原生支持一键软链接（Junction / Symlink）至 **Google Antigravity**、**Anthropic Claude Code** 及 **OpenAI Codex**。
 2. **规范化架构**：每个 Skill 均配备标准的 `SKILL.md`（遵循 YAML Frontmatter）、参考知识库 `references/`、规范模板与评测样例 `evals/`。
 3. **极速热更新**：在当前仓库编辑技能源码，本地绑定的各 AI 助手将实时生效，无需重复拷贝。
-4. **开源生态协同**：内置 25+ 自研核心技能与专项科研套件，并配套维护了 [78+ 社区开源高频技能索引表](COMMUNITY_SKILLS.md)。
+4. **开源生态协同**：内置 25+ 核心精选技能与专项科研套件，并配套维护了 [78+ 社区开源高频技能索引表](COMMUNITY_SKILLS.md)。
 
 ---
 
-## 🎯 核心自研技能矩阵与触发指南 (`skills/`)
+## 🎯 核心技能矩阵与触发指南 (`skills/`)
 
 | 技能名称 | 目录路径 | 核心能力定位 | 典型触发场景 / 常用提示词 |
 | :--- | :--- | :--- | :--- |
@@ -83,7 +83,7 @@
 
 ## 🌐 常用外部与社区开源技能清单
 
-除了自研核心技能外，为了方便日常跨环境复用与溯源，仓库整理了配套的开源技能导航：
+除了上述核心技能外，为了方便日常跨环境复用与溯源，仓库整理了配套的开源技能导航：
 
 👉 **[点击查阅完整的 78+ 常用外部开源技能清单 (COMMUNITY_SKILLS.md)](COMMUNITY_SKILLS.md)**
 
@@ -141,7 +141,7 @@ chmod +x install.sh
 ```text
 myskills/
 ├── .gitignore                      # 忽略临时缓存、日志与系统文件
-├── README.md                       # 仓库全景说明与自研技能总索引
+├── README.md                       # 仓库全景说明与核心技能总索引
 ├── COMMUNITY_SKILLS.md             # 78+ 常用社区/外部开源技能导航表
 ├── install.ps1                     # Windows PowerShell 自动化安装与软链脚本 (Junction)
 ├── install.sh                      # Linux / macOS Bash 安装与软链脚本 (Symlink)
