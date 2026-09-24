@@ -23,7 +23,7 @@ param(
 
 $RepoRoot = $PSScriptRoot
 $SkillsDir = Join-Path $RepoRoot "skills"
-$SuitesDir = Join-Path $RepoRoot "suites"
+$CryoSkillsDir = Join-Path $SkillsDir "cryogenian\skills"
 
 # 定义目标目录映射
 $TargetDirs = @{}
@@ -47,9 +47,9 @@ Write-Host "========================================" -ForegroundColor Cyan
 # 获取需要安装的技能列表
 $SkillsToInstall = @()
 
-# 1. 独立技能
+# 1. 独立技能 (排除 cryogenian 套件目录)
 if (Test-Path $SkillsDir) {
-    Get-ChildItem -Path $SkillsDir -Directory | ForEach-Object {
+    Get-ChildItem -Path $SkillsDir -Directory | Where-Object { $_.Name -ne 'cryogenian' } | ForEach-Object {
         $SkillsToInstall += [PSCustomObject]@{
             Name = $_.Name
             Source = $_.FullName
@@ -58,8 +58,7 @@ if (Test-Path $SkillsDir) {
     }
 }
 
-# 2. 套件中的子技能
-$CryoSkillsDir = Join-Path $SuitesDir "cryogenian\skills"
+# 2. 成冰纪科研套件中的子技能
 if (Test-Path $CryoSkillsDir) {
     Get-ChildItem -Path $CryoSkillsDir -Directory | ForEach-Object {
         $SkillsToInstall += [PSCustomObject]@{

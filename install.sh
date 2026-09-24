@@ -22,7 +22,7 @@ done
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILLS_DIR="$REPO_ROOT/skills"
-SUITES_DIR="$REPO_ROOT/suites"
+CRYO_DIR="$SKILLS_DIR/cryogenian/skills"
 
 echo "========================================"
 echo "  MySkills 安装向导 (BlueRocket)"
@@ -46,10 +46,13 @@ for dest_root in "${TARGET_DIRS[@]}"; do
         mkdir -p "$dest_root"
     fi
 
-    # 1. 独立技能
+    # 1. 独立技能 (跳过 cryogenian 套件目录)
     for skill_path in "$SKILLS_DIR"/*; do
         if [ -d "$skill_path" ]; then
             name="$(basename "$skill_path")"
+            if [ "$name" = "cryogenian" ]; then
+                continue
+            fi
             dest="$dest_root/$name"
             echo "  - 独立技能: $name"
             if [ "$DRY_RUN" = false ]; then
@@ -64,21 +67,23 @@ for dest_root in "${TARGET_DIRS[@]}"; do
     done
 
     # 2. 成冰纪套件子技能
-    for skill_path in "$SUITES_DIR/cryogenian/skills"/*; do
-        if [ -d "$skill_path" ]; then
-            name="$(basename "$skill_path")"
-            dest="$dest_root/$name"
-            echo "  - 套件子技能: $name"
-            if [ "$DRY_RUN" = false ]; then
-                rm -rf "$dest"
-                if [[ "$MODE" == "symlink" ]]; then
-                    ln -sf "$skill_path" "$dest"
-                else
-                    cp -r "$skill_path" "$dest"
+    if [ -d "$CRYO_DIR" ]; then
+        for skill_path in "$CRYO_DIR"/*; do
+            if [ -d "$skill_path" ]; then
+                name="$(basename "$skill_path")"
+                dest="$dest_root/$name"
+                echo "  - 套件子技能: $name"
+                if [ "$DRY_RUN" = false ]; then
+                    rm -rf "$dest"
+                    if [[ "$MODE" == "symlink" ]]; then
+                        ln -sf "$skill_path" "$dest"
+                    else
+                        cp -r "$skill_path" "$dest"
+                    fi
                 fi
             fi
-        fi
-    done
+        done
+    fi
 done
 
 echo "安装完成！"
