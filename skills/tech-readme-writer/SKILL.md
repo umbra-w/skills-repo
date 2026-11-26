@@ -168,3 +168,4 @@ Before presenting the README or guide, verify against this 6-point checklist:
 - [ ] **Table Density**: Are all table cells concise without multi-sentence paragraphs?
 - [ ] **Verifiable Commands**: Are all bash / launch commands complete, copy-pasteable, and tested?
 - [ ] **No Process Residue**: Are there timelines, command transcripts, or "first I tried / then I found" narration left in the body? Remove them or compress to a conclusion.
+- [ ] **No Unverified Variants**: Does every command and path in the document come from an executed run? Are untested alternatives removed or explicitly marked? Are absolute claims replaced with the conditions under which they hold?
